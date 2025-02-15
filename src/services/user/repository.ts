@@ -57,6 +57,7 @@ class Repository implements IRepository {
 
         return payload
     }
+    
     async fetchChangeQR(token: string, signal?: AbortSignal): Promise<string> {
 
         const payload: string = await this.adapter.qr(token, signal)

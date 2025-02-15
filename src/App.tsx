@@ -1,13 +1,8 @@
-import { useEffect } from "react"
 import useStore from "./services/user"
 
 const App = (): JSX.Element => {
 
-    const isFetchingMe = useStore(state => state.isFetchingMe)
-
-    const profile = useStore(state => state.profile)
-
-    const fetchMe = useStore(state => state.fetchMe)
+    const { isFetchingMe, profile, fetchMe } = useStore(state => state)
 
     const handleClick = async () => {
 
